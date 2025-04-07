@@ -2109,56 +2109,65 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
-		position: absolute;
-		display: block;
-		top: 2.5em;
-		left: 0;
-		width: 100%;
-	}
-
-		#nav > ul {
-			display: inline-block;
-			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-			padding: 0 1.5em 0 1.5em;
-		}
-
-			#nav > ul > li {
-				display: inline-block;
-				text-align: center;
-				padding: 0 1.5em 0 1.5em;
-			}
-
-				#nav > ul > li > ul {
-					display: none;
-				}
-
-				#nav > ul > li > a, #nav > ul > li > span {
-					display: block;
-					color: #eee;
-					color: rgba(255, 255, 255, 0.75);
-					text-transform: uppercase;
-					text-decoration: none;
-					font-size: 0.7em;
-					letter-spacing: 0.25em;
-					height: 5em;
-					line-height: 5em;
-					-moz-transition: all .25s ease-in-out;
-					-webkit-transition: all .25s ease-in-out;
-					-o-transition: all .25s ease-in-out;
-					-ms-transition: all .25s ease-in-out;
-					transition: all .25s ease-in-out;
-					outline: 0;
-				}
-
-				#nav > ul > li:hover > a {
-					color: #fff;
-				}
-
-				#nav > ul > li.active > a, #nav > ul > li.active > span {
-					color: #fff;
-				}
+#nav {
+	position: absolute;
+	top: 2.5em;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+  }
+  
+  .nav-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2em;
+  }
+  
+  .nav-left .logo {
+	font-size: 1.8em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+  }
+  
+  .nav-menu, .nav-util {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .nav-menu {
+	flex: 1;
+	justify-content: center;
+	gap: 2em;
+  }
+  
+  .nav-util {
+	gap: 1.5em;
+  }
+  
+  .nav-menu > li, .nav-util > li {
+	text-align: center;
+  }
+  
+  .nav-menu > li > a,
+  .nav-util > li > a {
+	display: block;
+	color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+	font-size: 0.85em;
+	transition: color 0.25s ease-in-out;
+  }
+  
+  .nav-menu > li > a:hover,
+  .nav-util > li > a:hover {
+	color: #000;
+  }
 
 	.dropotron {
 		background: #222835 url("images/overlay.png");
